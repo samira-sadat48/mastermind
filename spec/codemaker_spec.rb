@@ -12,5 +12,13 @@ module Mastermind
                 expect { Codemaker.new(input) }.to_not raise_error
             end
         end
+
+        context "#select_colors" do
+            it "creates 4 pegs with random colors 1-6 (no error)" do
+                input = { name: "samira" }
+                codemaker = Codemaker.new(input)
+                expect {codemaker.select_colors}.to_not raise_error
+            end
+        end
     end
 end

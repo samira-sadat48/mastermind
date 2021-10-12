@@ -8,10 +8,16 @@ module Mastermind
             @name = input.fetch(:name)
         end
 
-        def select_colors(item)
+        def select_colors
             #sequence of 4 items (colored pegs)
             #each peg random from 1-6
-            #peg_one = Peg.new(randomNum)
+            peg_one = CodePeg.new((rand(6)+1).to_s)
+            peg_two = CodePeg.new((rand(6)+1).to_s)
+            peg_three = CodePeg.new((rand(6)+1).to_s)
+            peg_four = CodePeg.new((rand(6)+1).to_s)
+
+            colors = [peg_one,peg_two,peg_three, peg_four]
+            colors
         end
     end
 end
