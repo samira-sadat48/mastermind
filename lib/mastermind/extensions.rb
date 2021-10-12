@@ -9,6 +9,13 @@ module Extensions
         '6' => "\e[41m  6  \e[0m ",
     }[number]
     end
+
+    def clue_colors(letter)
+    {
+        'b' => "\e[91m\u25CF\e[0m ",
+        'w' => "\e[37m\u25CB\e[0m "
+    }[letter]
+    end
 end
     
         
