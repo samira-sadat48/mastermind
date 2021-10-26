@@ -18,29 +18,38 @@ module Extensions
     end
 
     def compare(computer,human)
+        temp_computer_code = computer
+        temp_human_guess = human
         #check number of exact matches
+        @exact_number = find_exact_matches(temp_computer_code, temp_human_guess)
         #check number of same matches
+        @same_number = find_correct_numbers(temp_computer_code, temp_human_guess)
     end
 
-    #def feedback(turn_number)
-        #initialize a clue_tracker row array
-        #clue_tracker_row = Array.new(4)
-        #compare secret code with the player guess
-        #guess_tracker[turn_number].each_with_index do {|guess_peg, guess_index|
-            #ecret_code.each do{|code_peg, code_index|}
-                #find ones that match color and position(indexes)
-                #if (guess_peg == code_peg) && (guess_index == code_index)
-                    #set a black key peg in the next empty index in clue tracker
-                    #clue_tracker_row[code_index] = KeyPeg.new('b')
-                #elsif guess_peg == code_peg
-                    #set white key peg
-                #end
-            #}
-            #end
-        #}
-        #end
-        #return  clue_tracker_row
-    #end
+    def find_exact_matches(code,guess)
+        exact = 0
+        code.each_with_index do |peg, index|
+            if peg == guess[index]
+                exact += 1
+                code[index] = '*'
+                guess[index] = '*'
+            end
+        end
+    end
+
+    def find_correct_numbers(code,guess)
+        #check entire guess array to see if it includes each code item
+        same = 0
+        guess.each_with_index do |peg, index|
+            if  guess[index] != "*" && code.include?(guess[index])
+                same += 1
+                code_index = code.find_index(guess[index])
+                code[code_index] = '?'
+                guess = '?'
+            end
+        end
+        same
+    end
 end
     
         

@@ -53,6 +53,7 @@ module Mastermind
 
         def turn_result?
             #compare to find exact and same matches
+            compare(computer_code,guess_code)
             #output the clue array to console
         end
     end
