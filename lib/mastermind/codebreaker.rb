@@ -37,9 +37,11 @@ module Mastermind
         end
 
         def game_over
-            #if solved - human wins
-            # else - you lose
-            # show computer code
+            if computer_code == guess_code
+                puts "You win!"
+            else
+                puts "You lose! The correct answer is #{computer_code}."
+            end
         end
 
         def human_input
