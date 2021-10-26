@@ -16,6 +16,12 @@ module Extensions
         'w' => "\e[37m\u25CB\e[0m "
     }[letter]
     end
+
+    def compare(computer,human)
+        #check number of exact matches
+        #check number of same matches
+    end
+
 end
     
         
