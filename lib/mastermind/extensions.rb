@@ -22,6 +22,25 @@ module Extensions
         #check number of same matches
     end
 
+    #def feedback(turn_number)
+        #initialize a clue_tracker row array
+        #clue_tracker_row = Array.new(4)
+        #compare secret code with the player guess
+        #guess_tracker[turn_number].each_with_index do {|guess_peg, guess_index|
+            #ecret_code.each do{|code_peg, code_index|}
+                #find ones that match color and position(indexes)
+                #if (guess_peg == code_peg) && (guess_index == code_index)
+                    #set a black key peg in the next empty index in clue tracker
+                    #clue_tracker_row[code_index] = KeyPeg.new('b')
+                #elsif guess_peg == code_peg
+                    #set white key peg
+                #end
+            #}
+            #end
+        #}
+        #end
+        #return  clue_tracker_row
+    #end
 end
     
         

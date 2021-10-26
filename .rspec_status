@@ -1,14 +1,16 @@
-example_id                      | status | run_time        |
-------------------------------- | ------ | --------------- |
-./spec/board_spec.rb[1:1:1]     | passed | 0.00058 seconds |
-./spec/board_spec.rb[1:1:2]     | passed | 0.00018 seconds |
-./spec/board_spec.rb[1:1:3]     | passed | 0.00215 seconds |
-./spec/code_peg_spec.rb[1:1:1]  | passed | 0.00058 seconds |
-./spec/code_peg_spec.rb[1:1:2]  | passed | 0.00012 seconds |
-./spec/code_peg_spec.rb[1:1:3]  | passed | 0.00215 seconds |
-./spec/codemaker_spec.rb[1:1:1] | passed | 0.00235 seconds |
-./spec/codemaker_spec.rb[1:1:2] | passed | 0.00013 seconds |
-./spec/codemaker_spec.rb[1:2:1] | passed | 0.00042 seconds |
-./spec/key_peg_spec.rb[1:1:1]   | passed | 0.00062 seconds |
-./spec/key_peg_spec.rb[1:1:2]   | passed | 0.00015 seconds |
-./spec/key_peg_spec.rb[1:1:3]   | passed | 0.00238 seconds |
+example_id                        | status | run_time        |
+--------------------------------- | ------ | --------------- |
+./spec/board_spec.rb[1:1:1]       | passed | 0.00058 seconds |
+./spec/board_spec.rb[1:1:2]       | passed | 0.00018 seconds |
+./spec/board_spec.rb[1:1:3]       | passed | 0.00215 seconds |
+./spec/code_peg_spec.rb[1:1:1]    | passed | 0.00058 seconds |
+./spec/code_peg_spec.rb[1:1:2]    | passed | 0.00012 seconds |
+./spec/code_peg_spec.rb[1:1:3]    | passed | 0.00215 seconds |
+./spec/codebreaker_spec.rb[1:1:1] | passed | 0.00139 seconds |
+./spec/codebreaker_spec.rb[1:1:2] | passed | 0.00016 seconds |
+./spec/codemaker_spec.rb[1:1:1]   | passed | 0.00235 seconds |
+./spec/codemaker_spec.rb[1:1:2]   | passed | 0.00013 seconds |
+./spec/codemaker_spec.rb[1:2:1]   | passed | 0.00042 seconds |
+./spec/key_peg_spec.rb[1:1:1]     | passed | 0.00062 seconds |
+./spec/key_peg_spec.rb[1:1:2]     | passed | 0.00015 seconds |
+./spec/key_peg_spec.rb[1:1:3]     | passed | 0.00238 seconds |
