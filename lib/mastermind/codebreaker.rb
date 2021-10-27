@@ -64,7 +64,7 @@ module Mastermind
         end
 
         def create_guess_pegs(input)
-            guess = Array.ew
+            guess = Array.new
             input.each {|n| guess.push(n)}
             guess
         end
