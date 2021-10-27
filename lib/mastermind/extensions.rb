@@ -35,6 +35,7 @@ module Extensions
                 guess[index] = '*'
             end
         end
+        exact
     end
 
     def find_correct_numbers(code,guess)
