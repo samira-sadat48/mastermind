@@ -1,14 +1,12 @@
+require_relative 'extensions.rb'
+
 module Mastermind
     class Codebreaker
-        attr_reader :name, :computer_code, :guess_code, :exact_number, :same_number
+        attr_reader :computer_code, :guess_code, :exact_number, :same_number
 
-        include extensions
+        include Extensions
 
-        def initialize(input)
-            if input == nil
-                raise ArgumentError.new "Invalid Player Arguments"
-            end
-            @name = input.fetch(:name)
+        def initialize
             peg_one = CodePeg.new((rand(6)+1).to_s)
             peg_two = CodePeg.new((rand(6)+1).to_s)
             peg_three = CodePeg.new((rand(6)+1).to_s)
@@ -23,11 +21,13 @@ module Mastermind
             game_over
         end
 
+        private
+
         def turn_loop
             current_turn = 1
             while current_turn <= 12
                 puts "This is turn number #{current_turn}."
-                @guess_code = create_guess_pegs(human_input)
+                @guess_code = human_input.split
                 current_turn += 1
                 break if guess_code[0] = 'q' 
                 puts guess_code
@@ -61,12 +61,6 @@ module Mastermind
             puts "Clues: "
             exact_number.times { puts clue_colors('*')}
             same_number.times { puts clue_colors('?')}
-        end
-
-        def create_guess_pegs(input)
-            guess = Array.new
-            input.each {|n| guess.push(n)}
-            guess
         end
     end
 end
